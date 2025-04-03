@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 1</title>
+    <link rel="icon" type="image/x-icon" href="./assests/logo/Logo_last.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      table, th,td{
+  border:1px solid black;
+}
+      body {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.6;
+        background-color: #f0f3f5; /* Light gray */
+        color: #333; /* Dark gray */
+        margin: 0;
+      }
+
+      .container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #bbe9ff; /* Light blue */
+        /* padding: 20px; */
+      }
+
+      .header{
+  height:5%;
+  width:100%
+}
+
+      .company-logo {
+        height: 100%;
+      }
+
+      .content-container {
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 1250px;
+        background-color: #ffffff; /* White */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 8px; /* Rounded corners */
+
+        img {
+          /* max-width: 100%; */
+          /* width: 45%; */
+          display: block;
+          margin: 1rem auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      .lesson-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #333; /* Dark gray */
+        margin-bottom: 1rem;
+        text-align: center;
+        text-decoration: underline; /* Underline style */
+      }
+      .button-container {
+  position: fixed; /* Fix the button to the screen */
+  top: 10%; /* Set distance from top */
+  right: 10%; /* Set distance from left */
+  z-index: 100; /* Ensure the button stays above other content */
+}
+      .button {
+        
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 15px;
+        background-color: #4CAF50; /* Green */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.4rem;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .probing-question {
+        margin-top: 1.5rem;
+        background-color: #f0f8ff; /* Light blue */
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      .probing-question div {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #444; /* Dark gray */
+        margin-bottom: 5px;
+      }
+
+      .probing-question p {
+        color: #666; /* Medium gray */
+      }
+
+      h2,
+      h3,
+      h4 {
+        color: #333; /* Dark gray */
+        margin-top: 1.5rem;
+        font-weight: bold; /* Bold font for all headings */
+      }
+
+      .learn-about {
+        background-color: palegreen;
+        border-radius: 1rem;
+        text-align: left;
+        margin: 1rem;
+        padding: 1rem 0;
+        li {
+          list-style-position: inside;
+          padding-left: 1rem;
+        }
+      }
+      footer {
+        width: 100%;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      border-radius: 15px;
+      box-shadow: 5px 5px 15px #b3b3b3, -5px -5px 15px #ffffff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+      color: #333;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    footer::after {
+      content: '';
+      position: relative;
+      
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      /* z-index: 1; */
+      border-radius: 15px;
+    }
+
+    footer span {
+      position: relative;
+    }
+
+      p,
+      li {
+        color: #555; /* Medium gray */
+        font-size: 1.4rem;
+      }
+
+      ol,
+      ul {
+        margin-bottom: 1.5rem;
+        padding-left: 20px;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Optional */
+    }
+    table {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+      hr {
+        border: none; /* Remove default border */
+        height: 2px; /* Set the height of the horizontal rule */
+        background-color: palevioletred; /* Color of the rule */
+      }
+      @media (max-width: 768px) {
+        .company-logo {
+          height: 75%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header" style="background-color:white;width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0);  padding-bottom:10px;">
+        <img src="assests/logo/Logo_last.png" width="5%" style="float:left; margin-top:1.5%;" class="img-responsive">
+        <span> <img src="assests/logo/header.png" width="30%" height="80%" class="img-responsive"></span>
+      </div>
+
+      <div class="content-container">
+       
+        <!-- <div class="lesson-title">Three-Dimensional Shapes        </div> -->
+        <div>
+          <h2 style="color: blueviolet;text-align: center;"><u>Probability</u></h2>
+          <p>
+            Probability is a way to measure how likely something is to happen. It helps us predict the chances of different events. Probability can be expressed as:
+          </p>
+          <ul>
+            <li>
+              Fractions: e.g., ½ (one out of two chances)
+            </li>
+            <li>
+              Decimals: e.g., 0.5
+            </li>
+            <li>
+              Percentages: e.g., 50%
+            </li>
+          </ul>
+
+          <h2 style="color: blueviolet; text-align: center;"><u>Basis Terms Related to Probability</u></h2>
+          <p>
+            <b style="color: blueviolet;">Experiment:</b> An action or process that leads to different possible results.
+            <br><b style="color: #4CAF50;">Example: </b>
+<br>Rolling a die, flipping a coin, etc.
+<br><br><b style="color: blueviolet;">Outcome:</b> A possible result of an experiment.
+<br><b style="color: #4CAF50;">Example:</b>
+<br>When rolling a die, the possible outcomes are 1, 2, 3, 4, 5, and 6.
+<br><br><b style="color: blueviolet;">Sample Space:</b> The set of all possible outcomes in an experiment.
+<br><b style="color: #4CAF50;">Example:</b>
+
+          </p>
+          <ul>
+            <li>For flipping a coin, the sample space is {Heads, Tails}.</li>
+            <li>For rolling a die, the sample space is {1, 2, 3, 4, 5, 6}.</li>
+          </ul>
+          <p>
+            <b style="color: blueviolet;">Event:</b> A specific outcome or a set of outcomes from an experiment.
+            <br><b style="color: #4CAF50;">Example:</b>
+<br>Getting an even number (2, 4, 6) when rolling a die is an event.
+<br><br><b style="color: blueviolet;">Favorable Outcome:</b> The outcome that we are interested in or looking for.
+<br><b style="color: #4CAF50;">Example:</b>
+<br>If we want to roll a 4 on a die, then the favorable outcome is 4.
+
+          </p>
+          <h2 style="color: blueviolet;">Tree Diagram for Calculating the Number of Possible Outcomes</h2>
+          <p>
+            A <b>tree diagram</b> is a visual way to list all possible outcomes of an event. Each branch represents a different choice, and multiplying along the branches helps calculate the total number of possible outcomes.
+            <br><br><b style="color: #4CAF50;">Example:</b> <b>Emma's Outfit Choices</b>
+<br>Emma is selecting an outfit for the day. She has:
+<br><b>2 shirts → Red,  Blue
+  <br> 3 pants → Black, White, Gray </b>
+  <br><br>To find the total number of outfit choices, we can use a <b>tree diagram</b>.
+<br><br><b>Step 1: Start with the first choice (Shirt)</b>
+<br><img width="40%" src="./assests/explaination/1.png" alt="">
+<br><b>Step 2: Add the second choice (Pants)</b>
+<br>For each shirt, she can choose one of <b>3 pants </b>(Black, White, or Gray).
+<br><img width="40%" src="./assests/explaination/2.png" alt="">
+<br><b>Step 3: List the Possible Outcomes</b>
+<br>Each path in the tree represents one possible outfit combination:
+<br><img width="45%" src="./assests/explaination/3.png" alt="">
+<br><b>Total number of outcomes:</b>
+<br>2 × 3 = 6
+
+          </p>
+
+          <h2 style="color: blueviolet;">Probability Scale          </h2>
+          <p>
+            The probability of an event happening is always between 0 and 1 (or 0% to 100%):
+          </p>
+          <ul>
+            <li>
+              <b style="color: blueviolet;">Impossible Event:</b> If an event has a probability of 0, it cannot happen.
+              <br><b style="color: #4CAF50;">Example:</b> Rolling a 7 on a normal die (since a die only has numbers 1-6).
+            </li>
+            <li>
+              <b style="color: blueviolet;">Certain Event:</b> If an event has a probability of 1, it will definitely happen.
+              <br><b style="color: #4CAF50;">Example:</b> The sun will rise tomorrow.
+            </li>
+            <li>
+              <b>Between 0 and 1:</b> Most events fall between 0 and 1.
+              <br><b style="color: #4CAF50;">Example:</b> The probability of getting heads when flipping a coin is ½ (50%).
+            </li>
+          </ul>
+          <p>
+            The probability of an event happening is:
+            <br>P(Event) = <math><mfrac bevelled="true"><mfrac><msup><mi style="font-size: 1.4rem;">Number of Favorable Outcomes</mi></msup></mfrac><mfrac><msup><mi style="font-size: 1.4rem;">Total Number of Outcomes</mi></msup></mfrac></mfrac></math>
+<br><br><b style="color: #4CAF50;">Example:</b> <b>Rolling a Die</b>
+<br>A fair die has 6 faces numbered 1 to 6. What is the probability of rolling a 3?
+<br>Favorable outcome = 1 (only one face has 3)
+<br>Total outcomes = 6 (since a die has six faces)
+<br>P(3) = <math><mfrac bevelled="true"><mfrac><msup><mi style="font-size: 1.4rem;">Number of Favorable Outcomes</mi></msup></mfrac><mfrac><msup><mi style="font-size: 1.4rem;">Total Number of Outcomes</mi></msup></mfrac></mfrac></math> = <math><mfrac bevelled="true"><mfrac><msup><mi style="font-size: 1.4rem;">1</mi></msup></mfrac><mfrac><msup><mi style="font-size: 1.4rem;">6</mi></msup></mfrac></mfrac></math>
+<br><br><b style="color: #4CAF50;">Example:</b> <b>Probability of rolling an even number (2, 4, or 6) on a dice?</b>
+<br>Favorable outcomes = 3 (2, 4, 6)
+<br>Total outcomes = 6
+<br>P(Even) = <math><mfrac bevelled="true"><mfrac><msup><mi style="font-size: 1.4rem;">Number of Favorable Outcomes</mi></msup></mfrac><mfrac><msup><mi style="font-size: 1.4rem;">Total Number of Outcomes</mi></msup></mfrac></mfrac></math> = <math><mfrac bevelled="true"><mfrac><msup><mi style="font-size: 1.4rem;">3</mi></msup></mfrac><mfrac><msup><mi style="font-size: 1.4rem;">6</mi></msup></mfrac></mfrac></math> = <math><mfrac bevelled="true"><mfrac><msup><mi style="font-size: 1.4rem;">1</mi></msup></mfrac><mfrac><msup><mi style="font-size: 1.4rem;">2</mi></msup></mfrac></mfrac></math>
+
+<br><br><b style="color: blueviolet;">Equally Likely Outcomes:</b> When all possible outcomes have the same chance of happening.
+<br><b style="color: #4CAF50;">Example:</b>
+<br> In a fair coin toss, heads and tails are equally likely because both have a ½ probability.
+ <br><br><b style="color: blueviolet;">Unequally Likely Outcomes</b>
+<br>When some outcomes have a higher chance of happening than others.
+<br><b style="color: #4CAF50;">Example:</b>
+<br>If a bag contains 4 red marbles and 1 blue marble, picking a red marble is more likely than picking a blue one.
+
+          </p>
+
+          <h2 style="color: blueviolet;">Independent Events</h2>
+          <p>
+            Two events are <b>independent</b> if the occurrence of one event <b>does not affect</b> the probability of the other event occurring.
+            <br><b style="color: #4CAF50;">Examples:</b>
+
+          </p>
+          <ol>
+            <li>
+              <b>Flipping a Coin Twice:</b>
+              <br>The outcome of the first flip (heads or tails) does not affect the outcome of the second flip
+            </li><br>
+            <li>
+              <b>Picking a Marble from a Bag, Then Replacing It, and Picking Again:</b>
+              <br>If you pick a marble from a bag, put it back, and pick again, the first pick does not change the number of marbles in the bag for the second pick.
+            </li>
+          </ol>
+          <h2 style="color: blueviolet;">Dependent Events</h2>
+          <p>
+            Two events are <b>dependent</b> if the occurrence of the first event <b>affects</b> the probability of the second event.
+            <br><b style="color: #4CAF50;">Examples:</b>
+
+          </p>
+          <ol>
+            <li>
+              <b>Picking Marbles Without Replacement:</b>
+
+
+              <br>If you pick a marble from a bag <b>without putting it back</b>, the second pick is affected because there are fewer marbles left.
+            </li><br>
+            <li>
+              <b>Choosing Students for a Team Without Replacement:</b>
+
+
+<br>If a teacher picks a student for a team and does <b>not</b> replace them, the number of remaining students changes.
+            </li>
+          </ol>
+        </div>
+      </div> 
+    
+      
+      <div class="button-container">
+        <a href="question.html" class="button">To Practice<br>Click Next</a>
+    </div>
+    </div>
+    <footer>
+      <span>Created By Team Way To Succeed</span>
+    </footer>
+  </body>
+</html>
